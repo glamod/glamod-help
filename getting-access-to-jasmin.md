@@ -5,28 +5,26 @@
 Participants in the GLAMOD project will be developing a workflow that is primarily located on the JASMIN platform. This means that a large shared disk, known as a Group Workspace (GWS), will be accessible to project partners. If you are bringing data to JASMIN (and you are part of GLAMOD) or running code to work with the data you will need access to the GWS.
 
 ## Applying for access
-In order to get access to the c3s311a_lot2 (GLAMOD) Group Workspace you will need to get access to the JASMIN platform and then apply for access to the appropriate resources. This is, unfortunately, a multi-step process but is fully documented here:
-
-http://help.ceda.ac.uk/category/158-getting-started
+In order to get access to the c3s311a_lot2 (GLAMOD) Group Workspace you will need to get access to the JASMIN platform and then apply for access to the appropriate resources. This is, unfortunately, a multi-step process but is fully documented [on the CEDA help site](http://help.ceda.ac.uk/category/158-getting-started).
 
 You will need to pay attention to the following sections:
 
-* Generate an SSH key pair - to enable login to JASMIN
-* Get a JASMIN account - general-purpose JASMIN account but without any specific resources accessible)
-* Check network details – to ensure your institution is on our whitelist
-* Get a login account – actually allowing SSH login to JASMIN
-* How to login – instructions on how to login
-* Access to storage – worth a read for orientating yourself
+* **Generate an SSH key pair** - to enable login to JASMIN
+* **Get a JASMIN account** - general-purpose JASMIN account but without any specific resources accessible)
+* **Check network details** – to ensure your institution is on our whitelist
+* **Get a login account** – actually allowing SSH login to JASMIN
+* **How to login** – instructions on how to login
+* **Access to storage** – worth a read for orientating yourself
 
 At this stage, it should be possible to login to the accounts portal and request access to the project Group Workspace from here:
 
-https://accounts.jasmin.ac.uk/services/group_workspaces/c3s311a_lot2/
+[https://accounts.jasmin.ac.uk/services/group_workspaces/c3s311a_lot2/](https://accounts.jasmin.ac.uk/services/group_workspaces/c3s311a_lot2/)
 
 You will need to wait for this request to be approved by the JASMIN manager for the project. This is currently Ag Stephens.
 
 Once you have access you will be able to use rsync or scp to copy data to/from:
 
-*Server:* jasmin-xfer1.ceda.ac.uk
+*Server:* **jasmin-xfer1.ceda.ac.uk**
 
 *Directory:* `/group_workspaces/jasmin2/c3s311a_lot2/data/incoming/`
 
@@ -40,7 +38,7 @@ $ rsync –rv <your_data_dir> <jasmin_userid>@jasmin-xfer1.ceda.ac.uk: /group_wo
 
 Alternatively, you can SSH in to our analysis servers to interact with the data:
 
-*Servers:* jasmin-sci1.ceda.ac.uk, jasmin-sci2.ceda.ac.uk
+*Servers:* **jasmin-sci1.ceda.ac.uk**, **jasmin-sci2.ceda.ac.uk**
 
 *Directory:* `/group_workspaces/jasmin2/c3s311a_lot2/data/incoming/`
 

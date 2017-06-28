@@ -1,7 +1,6 @@
 # Transferring data to/from JASMIN:
 
-In-depth information about data transfer on JASMIN can be found on the CEDA help site:
-http://help.ceda.ac.uk/category/217-data-transfer
+In-depth information about data transfer on JASMIN can be found on the [CEDA help site](http://help.ceda.ac.uk/category/217-data-transfer).
 
 ## Quick example
 
