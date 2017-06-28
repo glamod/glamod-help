@@ -35,23 +35,25 @@ Since the repositories on GitLab will be private, you will not immediately have 
 ### Learning Git
 In order to make best use of GitHub and GitLab repositories you will need a basic understanding of the Git version control tool which both sites are designed around.
 
-This tutorial demonstrates some basic usage of the tool:
-https://try.github.io/
+This tutorial demonstrates some basic usage of the tool: [try.github.io](https://try.github.io/)
 
 The web interfaces for GitHub and GitLab also provide a number of basic Git functions such as the ability to modify individual files or perform a diff.
 
 ### Download Git
-Git is available for Windows, Mac and Linux and can be downloaded here:
-https://git-scm.com/downloads
+Git is available for Windows, Mac and Linux and can be downloaded from the [Git website](https://git-scm.com/downloads).
 
 ### Cloning public repositories
 Once you have Git installed and understand the basics, you should be able to clone any public GLAMOD repository. For instance:
+```
 git clone https://github.com/glamod/glamod-help.git
+```
 
 ### Cloning private repositories
-In order to clone a private repository from GitLab, you will need to link an SSH key to your GitLab profile: https://gitlab.com/profile/keys
+In order to clone a private repository from GitLab, you will need to link an SSH key to your [GitLab profile](https://gitlab.com/profile/keys).
 
-This process is similar to how you set up your JASMIN SSH key earlier but is explained in detail [here https://gitlab.com/help/ssh/README].
+This process is similar to how you set up your JASMIN SSH key earlier but is explained in detail [here](https://gitlab.com/help/ssh/README).
 
 If you have done this step correctly, you should be able to clone private repositories via SSH using the following syntax:
+```
 git clone git@gitlab.com:glamod/<repository_name>.git
+```
