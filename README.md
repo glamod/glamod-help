@@ -1,2 +1,7 @@
 # Help - documentation in support of GLAMOD
-This repository holds useful documentation to support GLAMOD. Please see the [wiki](https://github.com/glamod/wiki).
+This repository holds documentation to support the GLAMOD project. 
+
+## Get help
+
+Topics:
+ - [Getting access to JASMIN](getting-access-to-jasmin.md)
