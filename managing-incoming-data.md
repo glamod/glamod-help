@@ -21,3 +21,5 @@ Some resources that might be useful...
 Our own ISC course Git intro:
 
 [https://github.com/ncasuk/ncas-isc/blob/master/shell/presentations/01_git2.pptx/blob/master/shell/presentations/01_git2.pptx](https://github.com/ncasuk/ncas-isc/blob/master/shell/presentations/01_git2.pptx/blob/master/shell/presentations/01_git2.pptx)
+
+[Return to index](README.md)

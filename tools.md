@@ -57,3 +57,5 @@ If you have done this step correctly, you should be able to clone private reposi
 ```
 git clone git@gitlab.com:glamod/<repository_name>.git
 ```
+
+[Return to index](README.md)
