@@ -56,4 +56,4 @@ $ cd /group_workspaces/jasmin2/c3s311a_lot2/data/incoming/
 
 If you run into any problems with the above steps you can email support@ceda.ac.uk for assistance.
 
-[Return to index]()
+[Return to index](README.md)
