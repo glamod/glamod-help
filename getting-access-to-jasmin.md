@@ -32,7 +32,7 @@ You will do this by creating an ssh-agent session which should then be picked up
 
 ```sh
 $ exec ssh-agent $SHELL
-$ ssh-add ~/.ssh/id_rsa_jasmin # or whatever you called you private key for JASMIN
+$ ssh-add ~/.ssh/id_rsa_jasmin # or whatever you called your private key for JASMIN
 $ rsync –rv <your_data_dir> <jasmin_userid>@jasmin-xfer1.ceda.ac.uk: /group_workspaces/jasmin2/c3s311a_lot2/data/incoming/
 ```
 
