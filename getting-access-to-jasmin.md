@@ -22,7 +22,7 @@ At this stage, it should be possible to login to the accounts portal and request
 
 You will need to wait for this request to be approved by the JASMIN manager for the project. This is currently Ag Stephens.
 
-Once you have access you will be able to use rsync or scp to copy data to/from:
+Once you have access you will be able to use `rsync` or `scp` to copy data to/from:
 
 *Server:* **jasmin-xfer1.ceda.ac.uk**
 
@@ -47,7 +47,7 @@ You will do this by creating an ssh-agent session and making an SSH connection t
 *NOTE: If you have already done these first two lines in your session then you don't need to repeat it.*
 ```sh
 $ exec ssh-agent $SHELL
-$ ssh-add ~/.ssh/id_rsa_jasmin # or whatever you called you private key for JASMIN
+$ ssh-add ~/.ssh/id_rsa_jasmin # or whatever you called your private key for JASMIN
 $ ssh -A <jasmin_userid>@jasmin-login1.ceda.ac.uk
 $ ssh jasmin-sci2.ceda.ac.uk
 # ...and go to the Group Workspace here:
