@@ -9,12 +9,12 @@ In order to get access to the c3s311a_lot2 (GLAMOD) Group Workspace you will nee
 
 You will need to pay attention to the following sections:
 
-* [**Generate an SSH key pair**](http://help.ceda.ac.uk/article/185-generate-ssh-key-pair) - to enable login to JASMIN
-* [**Get a JASMIN account**](http://help.ceda.ac.uk/article/4435-get-a-jasmin-account) - general-purpose JASMIN account but without any specific resources accessible)
-* [**Check network details**](http://help.ceda.ac.uk/article/190-check-network-details) – to ensure your institution is on our whitelist
-* [**Get a login account**](http://help.ceda.ac.uk/article/161-get-login-account) – actually allowing SSH login to JASMIN
-* [**How to login**](http://help.ceda.ac.uk/article/187-login) – instructions on how to login
-* [**Access to storage**](http://help.ceda.ac.uk/article/176-storage) – worth a read for orientating yourself
+* **[Generate an SSH key pair](http://help.ceda.ac.uk/article/185-generate-ssh-key-pair)** - To enable login to JASMIN.
+* **[Get a JASMIN account](http://help.ceda.ac.uk/article/4435-get-a-jasmin-account)** - General-purpose JASMIN account but without any specific resources accessible.
+* **[Check network details](http://help.ceda.ac.uk/article/190-check-network-details)** – To ensure your institution is on our whitelist.
+* **[Get a login account](http://help.ceda.ac.uk/article/161-get-login-account)** – Actually allowing SSH login to JASMIN.
+* **[How to login](http://help.ceda.ac.uk/article/187-login)** – Instructions on how to login.
+* **[Access to storage](http://help.ceda.ac.uk/article/176-storage)** – Worth a read for orientating yourself.
 
 At this stage, it should be possible to login to the accounts portal and request access to the project Group Workspace from here:
 
