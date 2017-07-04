@@ -11,7 +11,7 @@ Elevation,
 FIPS Code,
 ECVs available,
 Data Start and End years for each ECV,
-Any other variables available,
+and any other variables available,
 
 Please also provide Data Usage Policy information with supporting documentation.
 The data information will be added to the master source deck inventory and the relevant timescale station deck inventory. Once this has been achieved the data will be moved into the following directory and relevant timescale subdirectory:
