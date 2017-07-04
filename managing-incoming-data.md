@@ -4,21 +4,22 @@ All raw incoming data from users should be uploaded to the data holding director
 /group_workspaces/jasmin2/c3s311a_lot2/data/incoming
 Please name the data file and provide any metadata/readme documents available.
 Please email [TBA] with details of the uploaded data and provide a data inventory if available detailing:
-Station name
-Station Id
-Latitude/Longitude
-Elevation
-FIPS Code
-ECVs available
-Data Start and End years for each ECV
-Any other variables available
+Station name,
+Station Id,
+Latitude/Longitude,
+Elevation,
+FIPS Code,
+ECVs available,
+Data Start and End years for each ECV,
+Any other variables available,
 
 Please also provide Data Usage Policy information with supporting documentation.
 The data information will be added to the master source deck inventory and the relevant timescale station deck inventory. Once this has been achieved the data will be moved into the following directory and relevant timescale subdirectory:
 /group_workspaces/jasmin2/c3s311a_lot2/data/stage1_raw_data/
-/monthly_data
-/daily_data
-/sub_data
+
+/monthly_data   
+/daily_data   
+/sub_data   
 
 Following data harmonisation, quality control and homogeneity checks the data will be made available based on the source Data Usage Policy. We will try to ensure that the data source is cited whenever the data are used.
 
