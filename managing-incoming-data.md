@@ -3,7 +3,7 @@
 All raw incoming data from users should be uploaded to the data holding directory:
 /group_workspaces/jasmin2/c3s311a_lot2/data/incoming
 Please name the data file and provide any metadata/readme documents available.
-Please email [TBA] with details of the uploaded data and provide a data inventory if available detailing:
+Please email [incoming_data@surfacetemperatures.org] with details of the uploaded data and provide a data inventory if available detailing:
 Station name,
 Station Id,
 Latitude/Longitude,
