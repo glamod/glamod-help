@@ -1,10 +1,10 @@
 # Managing incoming data
 
-All raw incoming data from users should be uploaded to the data holding directory:
+All raw incoming data from users should be compressed in a folder (named) and uploaded to the data holding directory on JASMIN:
 
 `/group_workspaces/jasmin2/c3s311a_lot2/data/incoming`
 
-Please name the data file and provide any metadata/readme documents available.
+Please name the data file and provide any metadata/readme documents available within the named comressed folder.
 
 Please email [incoming_data@surfacetemperatures.org] with details of the uploaded data and provide a data inventory if available detailing:
 
@@ -16,8 +16,9 @@ Please email [incoming_data@surfacetemperatures.org] with details of the uploade
 * ECVs available
 * Data Start and End years for each ECV
 * Any other variables available
+The items thst are essential: Station ID, Latitude/Longitude and elevation.
 
-Please also provide *Data Usage Policy* information with supporting documentation.
+Please also provide *Data Usage Policy* information with supporting documentation in a word document or text doocument.
 
 The data information will be added to the master source deck inventory and the relevant timescale station deck inventory. Once this has been achieved the data will be moved into the following directory and relevant timescale subdirectory:
 
