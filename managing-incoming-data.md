@@ -16,7 +16,8 @@ Please email [incoming_data@surfacetemperatures.org] with details of the uploade
 * ECVs available
 * Data Start and End years for each ECV
 * Any other variables available
-The items thst are essential: Station ID, Latitude/Longitude and elevation.
+
+The items that are essential: Station ID, Latitude/Longitude and elevation.
 
 Please also provide *Data Usage Policy* information with supporting documentation in a word document or text doocument.
 
