@@ -24,10 +24,11 @@ The items that are essential: Station ID or Station name, Latitude/Longitude and
 
 Please also provide *Data Usage Policy* information with supporting documentation in a word document or text doocument.
 
-The data information will be added to the master source deck inventory and the relevant timescale station deck inventory. Once this has been achieved the data will be moved into the following directory and relevant timescale subdirectory:
+The data information will be added to the paernt source deck inventory and the relevant timescale station deck inventory. Once this has been achieved the data and updated version of the inventories will be moved into the following directory and relevant sub directory:
 
 ```
-/group_workspaces/jasmin2/c3s311a_lot2/data/level0
+/group_workspaces/jasmin2/c3s311a_lot2/data/level0/
+            inventory
             land/monthly_data
             land/daily_data
             land/sub_daily_data
