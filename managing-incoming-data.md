@@ -2,7 +2,7 @@
 
 All raw incoming data from users should be compressed in a folder (named) and uploaded to the data holding directory on JASMIN:
 
-`/group_workspaces/jasmin2/c3s311a_lot2/data/incoming`
+`/group_workspaces/jasmin2/c3s311a_lot2/incoming`
 
 Please name the data file and provide any metadata/readme documents available within the named comressed folder.
 
@@ -10,6 +10,7 @@ Please email [incoming_data@surfacetemperatures.org] with details of the uploade
 
 * Station name
 * Station Id
+* WMO Id
 * Latitude/Longitude
 * Elevation
 * FIPS Code
