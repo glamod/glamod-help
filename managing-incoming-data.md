@@ -14,6 +14,8 @@ Please email [incoming_data@surfacetemperatures.org] with details of the uploade
 * Latitude/Longitude
 * Elevation
 * FIPS Code
+* Country
+* Continent
 * Climate variables available
 * Data Start and End years for each variable available
 * Any other variables available
