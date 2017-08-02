@@ -25,10 +25,10 @@ Please also provide *Data Usage Policy* information with supporting documentatio
 The data information will be added to the master source deck inventory and the relevant timescale station deck inventory. Once this has been achieved the data will be moved into the following directory and relevant timescale subdirectory:
 
 ```
-/group_workspaces/jasmin2/c3s311a_lot2/data/stage1_raw_data/
-            monthly_data/
-            daily_data/
-            sub_data/
+/group_workspaces/jasmin2/c3s311a_lot2/data/level0
+            land/monthly_data
+            land/daily_data
+            land/sub_daily_data
 ```
 
 Following data harmonisation, quality control and homogeneity checks the data will be made available based on the source Data Usage Policy. We will try to ensure that the data source is cited whenever the data are used.
