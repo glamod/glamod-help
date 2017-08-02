@@ -15,7 +15,7 @@ Please email [incoming_data@surfacetemperatures.org] with details of the uploade
 * Elevation
 * FIPS Code
 * ECVs available
-* Data Start and End years for each ECV
+* Data Start and End years for each variable available
 * Any other variables available
 
 The items that are essential: Station ID, Latitude/Longitude and elevation.
