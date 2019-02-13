@@ -144,12 +144,18 @@ The `station_type` codes are available from:
 ## Combining filters for more complex queries
 
 The Common Query Language (ECQL) allows multiple conditions to be provided as part of a single query by concatenating them together with "%20AND%20", for example:
+
+- Station ID and Time constraint (BEFORE):
+
  http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=1.0.0&request=GetFeature&typename=report_table_web&outputFormat=json&cql_filter=primary_station_id=%27IC301881%27AND%20report_timestamp%20BEFORE%201933-12-31T23:59:59Z
 
+- Station ID and Time constraint (AFTER):
  http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=1.0.0&request=GetFeature&typename=report_table_web&outputFormat=json&cql_filter=primary_station_id=%27IC301881%27AND%20report_timestamp%20AFTER%201933-01-01T00:00:00Z
 
+- Station ID and Time window (BEFORE and AFTER):
  http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=1.0.0&request=GetFeature&typename=report_table_web&outputFormat=json&cql_filter=primary_station_id=%27IC301881%27AND%20report_timestamp%20AFTER%201933-01-01T00:00:00Z%20AND%20report_timestamp%20BEFORE%201933-11-30T00:30:00Z
 
+- Station type, Observed Variable and Bounding Box:
  http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=1.0.0&request=GetFeature&typename=report_table_web&outputFormat=json&cql_filter=station_type=2%20AND%20observed_variable=85%20AND%20BBOX(report_location,-20,-80,50,-50)
 
 
