@@ -9,4 +9,4 @@ Topics:
  - [Tools to help make your life easier (code and task management)](tools.md)
  - [Managing incoming data](managing-incoming-data.md)
  - [Transferring data to/from JASMIN](transfering-data-to-from-jasmin.md)
- - [Example GeoServer queries](example-geoserver-queries.md)
+ - [GeoServer Query Interface](query-interface.md)
