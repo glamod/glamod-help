@@ -26,21 +26,21 @@ Once you have access you will be able to use `rsync` or `scp` to copy data to/fr
 
 *Server:* **jasmin-xfer1.ceda.ac.uk**
 
-*Directory:* `/group_workspaces/jasmin2/c3s311a_lot2/data/incoming/`
+*Directory:* `/gws/nopw/j04/c3s311a_lot2/data/incoming/`
 
 You will do this by creating an ssh-agent session which should then be picked up automatically by your rsync or scp process, e.g.:
 
 ```sh
 $ exec ssh-agent $SHELL
 $ ssh-add ~/.ssh/id_rsa_jasmin # or whatever you called your private key for JASMIN
-$ rsync –rv <your_data_dir> <jasmin_userid>@jasmin-xfer1.ceda.ac.uk: /group_workspaces/jasmin2/c3s311a_lot2/data/incoming/
+$ rsync –rv <your_data_dir> <jasmin_userid>@jasmin-xfer1.ceda.ac.uk: /gws/nopw/j04/c3s311a_lot2/data/incoming/
 ```
 
 Alternatively, you can SSH in to our analysis servers to interact with the data:
 
 *Servers:* **jasmin-sci1.ceda.ac.uk**, **jasmin-sci2.ceda.ac.uk**
 
-*Directory:* `/group_workspaces/jasmin2/c3s311a_lot2/data/incoming/`
+*Directory:* `/gws/nopw/j04/c3s311a_lot2/data/incoming/`
 
 You will do this by creating an ssh-agent session and making an SSH connection to our login server (using the "-A" option) before going to one of the scientific analysis servers:
 
@@ -51,7 +51,7 @@ $ ssh-add ~/.ssh/id_rsa_jasmin # or whatever you called your private key for JAS
 $ ssh -A <jasmin_userid>@jasmin-login1.ceda.ac.uk
 $ ssh jasmin-sci2.ceda.ac.uk
 # ...and go to the Group Workspace here:
-$ cd /group_workspaces/jasmin2/c3s311a_lot2/data/incoming/
+$ cd /gws/nopw/j04/c3s311a_lot2/data/incoming/
 ```
 
 If you run into any problems with the above steps you can email support@ceda.ac.uk for assistance.
