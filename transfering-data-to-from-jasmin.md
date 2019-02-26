@@ -7,13 +7,13 @@ In-depth information about data transfer on JASMIN can be found on the [CEDA hel
 To copy a file to your home directory (In mobaxterm):
 
 ```sh
-scp astephen@jasmin-xfer1.ceda.ac.uk:/group_workspaces/jasmin2/c3s311a_lot2/data/incoming/marine_what_am_i/2015/01/usaf-swo-03_REPLACE_s20150114_e20150203_c20170106220346.tar .
+scp astephen@jasmin-xfer1.ceda.ac.uk:/gws/nopw/j04/c3s311a_lot2/data/incoming/marine_what_am_i/2015/01/usaf-swo-03_REPLACE_s20150114_e20150203_c20170106220346.tar .
 ```
 
 To copy directories use "-r", e.g.:
 
 ```sh
-scp -r astephen@jasmin-xfer1.ceda.ac.uk:/group_workspaces/jasmin2/c3s311a_lot2/data/incoming/marine_what_am_i/2015/01 .  
+scp -r astephen@jasmin-xfer1.ceda.ac.uk:/gws/nopw/j04/c3s311a_lot2/data/incoming/marine_what_am_i/2015/01 .  
 ```
 
 [Return to index](README.md)
