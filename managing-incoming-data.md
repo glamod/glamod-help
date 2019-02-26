@@ -2,7 +2,7 @@
 
 All raw incoming data from users should be compressed in a folder (named) and uploaded to the data holding directory on JASMIN:
 
-`/group_workspaces/jasmin2/c3s311a_lot2/incoming`
+`/gws/nopw/j04/c3s311a_lot2/incoming`
 
 Please name the data file and provide any metadata/readme documents available within the named comressed folder.
 
@@ -27,7 +27,7 @@ Please also provide *Data Usage Policy* information with supporting documentatio
 The data information will be added to the parent source deck inventory and the relevant timescale station deck inventory. Once this has been achieved the data and updated version of the inventories will be moved into the following directory and relevant sub directory:
 
 ```
-/group_workspaces/jasmin2/c3s311a_lot2/data/level0/
+/gws/nopw/j04/c3s311a_lot2/data/level0/
             inventory
             land/monthly_data
             land/daily_data
