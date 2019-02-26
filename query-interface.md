@@ -10,7 +10,7 @@ This provides a web service API as the interface layer to the harmonised land an
 
 The WFS is currently publicly accessible via the endpoint:
 
- http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=1.0.0&request=GetCapabilities
+ http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=2.0.0&request=GetCapabilities
 
 The above URL provides an XML document describing the capabilities of the service.
 
@@ -42,7 +42,7 @@ The basic form of the query is:
 ```
 http://glamod1.ceda.ac.uk/geoserver/glamod/ows?
     service=WFS&
-	version=1.0.0&
+	version=2.0.0&
 	request=GetFeature&
 	typename=report_table_web&
 	outputFormat=json&
@@ -70,7 +70,7 @@ Details of how these input arguments are specified are given in the examples bel
 
 The following queries show how queries can be constructed for the options listed above. All queries should be appended on to the base URL:
 
- http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=1.0.0&request=GetFeature&typename=report_table_web&outputFormat=json&cql_filter=
+ http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=2.0.0&request=GetFeature&typename=report_table_web&outputFormat=json&cql_filter=
 
 ### 1. Station ID: primary_station_id
 
@@ -147,22 +147,24 @@ The Common Query Language (ECQL) allows multiple conditions to be provided as pa
 
 - Station ID and Time constraint (BEFORE):
 
- http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=1.0.0&request=GetFeature&typename=report_table_web&outputFormat=json&cql_filter=primary_station_id=%27IC301881%27AND%20report_timestamp%20BEFORE%201933-12-31T23:59:59Z
+ http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=2.0.0&request=GetFeature&typename=report_table_web&outputFormat=json&cql_filter=primary_station_id=%27IC301881%27AND%20report_timestamp%20BEFORE%201933-12-31T23:59:59Z
 
 - Station ID and Time constraint (AFTER):
 
- http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=1.0.0&request=GetFeature&typename=report_table_web&outputFormat=json&cql_filter=primary_station_id=%27IC301881%27AND%20report_timestamp%20AFTER%201933-01-01T00:00:00Z
+ http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=2.0.0&request=GetFeature&typename=report_table_web&outputFormat=json&cql_filter=primary_station_id=%27IC301881%27AND%20report_timestamp%20AFTER%201933-01-01T00:00:00Z
 
 - Station ID and Time window (BEFORE and AFTER):
 
- http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=1.0.0&request=GetFeature&typename=report_table_web&outputFormat=json&cql_filter=primary_station_id=%27IC301881%27AND%20report_timestamp%20AFTER%201933-01-01T00:00:00Z%20AND%20report_timestamp%20BEFORE%201933-11-30T00:30:00Z
+ http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=2.0.0&request=GetFeature&typename=report_table_web&outputFormat=json&cql_filter=primary_station_id=%27IC301881%27AND%20report_timestamp%20AFTER%201933-01-01T00:00:00Z%20AND%20report_timestamp%20BEFORE%201933-11-30T00:30:00Z
 
 - Station type, Observed Variable and Bounding Box:
 
- http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=1.0.0&request=GetFeature&typename=report_table_web&outputFormat=json&cql_filter=station_type=2%20AND%20observed_variable=85%20AND%20BBOX(report_location,-20,-80,50,-50)
+ http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=2.0.0&request=GetFeature&typename=report_table_web&outputFormat=json&cql_filter=station_type=2%20AND%20observed_variable=85%20AND%20BBOX(report_location,-20,-80,50,-50)
 
 
-## Response options
+## Responses
+
+### Response types
 
 The GeoServer WFS can provide the following responses:
 
@@ -171,3 +173,44 @@ The GeoServer WFS can provide the following responses:
  - JavaScript Object Notation: `application/json`
  - Geography Markup Language (XML): `gml3`
  - Shapefile: `shape-zip`
+ 
+### Modifying the Response fields
+
+The GeoServer implementation of WFS allows the response fields to optionally be selected in the request.
+
+The `propertyName` request parameter can be specified with a comma-separated list of values:
+
+ https://docs.geoserver.org/stable/en/user/services/wfs/reference.html#getfeature
+ 
+#### Example 1: Basic fields
+
+The following example selects only some fields from the output:
+
+ * date_time
+ * observation_duration
+ * observation_duration
+ * observation_longitude
+ * observation_latitude
+ * observed_variable
+ * observation_value
+ * value_significance
+ * units
+ * date_time_meaning
+ 
+As JSON:
+
+ http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=2.0.0&request=GetFeature&typename=report_table_web&outputFormat=json&cql_filter=primary_station_id=%27IC301881%27AND%20report_timestamp%20BEFORE%201933-12-31T23:59:59Z%20AND%20observed_variable=85&propertyName=date_time,observation_duration,observation_duration,observation_longitude,observation_latitude,observed_variable,observation_value,value_significance,units,date_time_meaning
+
+As CSV: 
+
+ http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=2.0.0&request=GetFeature&typename=report_table_web&outputFormat=csv&cql_filter=primary_station_id=%27IC301881%27AND%20report_timestamp%20BEFORE%201933-12-31T23:59:59Z%20AND%20observed_variable=85&propertyName=date_time,observation_duration,observation_duration,observation_longitude,observation_latitude,observed_variable,observation_value,value_significance,units,date_time_meaning
+ 
+#### Example 2: Basic fields - sorted by Date Time
+
+Here is the same query, with the added `sortBy=date_time` option in order to sort by that field:
+
+ http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=2.0.0&request=GetFeature&typename=report_table_web&outputFormat=csv&cql_filter=primary_station_id=%27IC301881%27AND%20report_timestamp%20BEFORE%201933-12-31T23:59:59Z%20AND%20observed_variable=85&propertyName=date_time,observation_duration,observation_duration,observation_longitude,observation_latitude,observed_variable,observation_value,value_significance,units,date_time_meaning&sortBy=date_time
+ 
+And to reverse sort by Date Time (add `+D` (descending) to the `sortBy` parameter):
+
+ http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=2.0.0&request=GetFeature&typename=report_table_web&outputFormat=csv&cql_filter=primary_station_id=%27IC301881%27AND%20report_timestamp%20BEFORE%201933-12-31T23:59:59Z%20AND%20observed_variable=85&propertyName=date_time,observation_duration,observation_duration,observation_longitude,observation_latitude,observed_variable,observation_value,value_significance,units,date_time_meaning&sortBy=date_time+D
