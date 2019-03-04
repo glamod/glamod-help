@@ -188,7 +188,6 @@ The following example selects only some fields from the output:
 
  * date_time
  * observation_duration
- * observation_duration
  * observation_longitude
  * observation_latitude
  * observed_variable
