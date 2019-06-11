@@ -62,11 +62,8 @@ You can limit the number of responses using a combination of arguments described
 The following arguments can be used:
  
  - `count=<LIMIT>` - where `<LIMIT>` is number of records to return.
- - `sortBy=<ATTRIBUTE>+<ORDER>` - where:
-   - `<ATTRIBUTE>` is the name of the field to sort by.
-   - `<ORDER>` is either `A` for "ascending" or `D` for "descending".
    
-The typical query form when limiting the number of responses and sorting would look like:
+The typical query form when limiting the number of responses would look like:
 
 ```
 http://glamod1.ceda.ac.uk/geoserver/glamod/ows?
@@ -76,7 +73,6 @@ http://glamod1.ceda.ac.uk/geoserver/glamod/ows?
 	typename=report_table_web&
 	outputFormat=json&
 	count=<LIMIT>&
-	sortBy=<ATTRIBUTE>+<ORDER>&
 	cql_filter=<QUERY>
 ```
 
@@ -253,13 +249,6 @@ As JSON:
 As CSV: 
  http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=2.0.0&request=GetFeature&typename=report_table_web&outputFormat=csv&cql_filter=primary_station_id=%27AG000060590%27%20AND%20observed_variable=85%20AND%20report_timestamp%20AFTER%201933-01-01T00:00:00Z%20AND%20report_timestamp%20BEFORE%201934-01-02T23:59:59Z%20AND%20date_time%20AFTER%201933-01-01T00:00:00Z%20AND%20date_time%20BEFORE%201934-01-02T23:59:59Z%20AND%20BBOX(report_location,-10,-10,30,49)&propertyName=date_time,observation_duration,observation_duration,observation_longitude,observation_latitude,observed_variable,observation_value,value_significance,units,date_time_meaning
  
-#### Example 2: Basic fields - sorted by Date Time
-
-Here is the same query, with the added `sortBy=date_time` option in order to sort by that field:
- http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=2.0.0&request=GetFeature&typename=report_table_web&outputFormat=csv&cql_filter=primary_station_id=%27AG000060590%27%20AND%20observed_variable=85%20AND%20report_timestamp%20AFTER%201933-01-01T00:00:00Z%20AND%20report_timestamp%20BEFORE%201934-01-02T23:59:59Z%20AND%20date_time%20AFTER%201933-01-01T00:00:00Z%20AND%20date_time%20BEFORE%201934-01-02T23:59:59Z%20AND%20BBOX(report_location,-10,-10,30,49)&propertyName=date_time,observation_duration,observation_duration,observation_longitude,observation_latitude,observed_variable,observation_value,value_significance,units,date_time_meaning&sortBy=date_time
- 
-And to reverse sort by Date Time (add `+D` (descending) to the `sortBy` parameter):
- http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=2.0.0&request=GetFeature&typename=report_table_web&outputFormat=csv&cql_filter=primary_station_id=%27AG000060590%27%20AND%20observed_variable=85%20AND%20report_timestamp%20AFTER%201933-01-01T00:00:00Z%20AND%20report_timestamp%20BEFORE%201934-01-02T23:59:59Z%20AND%20date_time%20AFTER%201933-01-01T00:00:00Z%20AND%20date_time%20BEFORE%201934-01-02T23:59:59Z%20AND%20BBOX(report_location,-10,-10,30,49)&propertyName=date_time,observation_duration,observation_duration,observation_longitude,observation_latitude,observed_variable,observation_value,value_significance,units,date_time_meaning&sortBy=date_time+D
  
  
 
