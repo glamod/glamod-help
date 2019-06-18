@@ -88,6 +88,8 @@ In this document, we focus on some specific options here:
  5. Time Window:
   - Using: `BEFORE`, `AFTER` on `report_timestamp`
  6. Station Type: `station_type`
+ 7. Searching in an Arrayusing "IN"
+ 8. Searching only the `observations_table` for efficiency
   
 Details of how these input arguments are specified are given in the examples below.
   
@@ -151,13 +153,11 @@ This query filters for results in the region bounded by 20W to 50E and 80S to 50
 
  `BBOX(report_location,<westernmost_longitude>,<southernmost_latitude>,<easternmost_longitude>,<northernmost_latitude>)`
  
-The short-hand way to remember it is: `BBOX(<field>,W,S,E,N)`
+The short-hand way to remember it is: `BBOX(<field>,W,S,E,N)` 
 
-E.g.:
+### 5. Time Window
 
- 
-
-### 5. Time Window: BEFORE, AFTER on report_timestamp
+#### 5a. Time Window: BEFORE, AFTER on report_timestamp
 
 Temporal filtering can be performed using the predicates `BEFORE` and/or `AFTER` on `report_timestamp` *and* the `date_time` field. Note that both fields must be matched in order for the underlying Postgres `SELECT` statements to be optimised:
 
@@ -175,6 +175,20 @@ E.g.:
  
 E.g.:
  http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=2.0.0&request=GetFeature&typename=report_table_web&outputFormat=json&count=5&cql_filter=report_timestamp%20AFTER%201940-01-01T00:00:00Z%20AND%20report_timestamp%20BEFORE%201940-12-31T06:00:00Z%20AND%20date_time%20AFTER%201940-01-01T00:00:00Z%20AND%20date_time%20BEFORE%201940-12-31T06:00:00Z
+ 
+#### 5b. Time Window: using "DURING"
+
+You can simplify the temporal selection by specifying the time window with:
+
+`DURING START/END`
+
+E.g.:
+`date_time%20DURING%201932-12-31T00:00:00Z/1933-01-02T00:00:00Z`
+
+An example query (using only the `observations_table`) would be:
+
+http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=2.0.0&request=GetFeature&typename=observations_table&outputFormat=json&cql_filter=report_id%20ILIKE%20%27AGE00135%25%27%20AND%20date_time%20DURING%201932-12-31T00:00:00Z/1933-01-02T00:00:00Z%20AND%20report_type=2%20AND%20observed_variable%20IN%20(44,85)
+
 
 ### 6. Station Type: station_type
 
@@ -208,6 +222,24 @@ The Common Query Language (ECQL) allows multiple conditions to be provided as pa
 - Identical query but only get the first 3 records:
 
  http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=2.0.0&request=GetFeature&typename=report_table_web&outputFormat=json&cql_filter=primary_station_id=%27AG000060590%27%20AND%20observed_variable=85%20AND%20report_timestamp%20AFTER%201933-01-01T00:00:00Z%20AND%20report_timestamp%20BEFORE%201934-01-02T23:59:59Z%20AND%20date_time%20AFTER%201933-01-01T00:00:00Z%20AND%20date_time%20BEFORE%201934-01-02T23:59:59Z%20AND%20BBOX(report_location,-10,-10,30,49)&count=3
+
+### 7. Searching in an Arrayusing "IN"
+
+You can search to find a value within an array of values using the ` IN ` operator, such as:
+
+`X IN (a,b,c)`
+
+For example, observed variable matches two options in an array:
+
+`observed_variable%20IN%20(44,85)`
+
+###  8. Searching only the `observations_table` for efficiency
+
+For speed, you might choose to only query the `observations_table` instead of `report_table_web`.
+
+This can be done by removing the `primary_station_id` and replacing it with `report_id%20ILIKE%20'<primary_station_id>%25'`. 
+
+This means only the `observations_table` is queried rather than a JOIN on the `header_table`. The key issue is that the `report_id` always begins with the `primary_station_id`.
 
 ## Responses
 
