@@ -253,7 +253,7 @@ To query the number of observations for a given variable, report type (frequency
 
 To find all monthly counts of monthly air temperature in 1999, use:
 
- http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=2.0.0&request=GetFeature&typename=observation_counts&outputFormat=json&cql_filter=year=1999%20AND%20var_code=85
+ http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=2.0.0&request=GetFeature&typename=observation_counts&outputFormat=json&cql_filter=year=1999%20AND%20var_code=85%20AND%20report_type=2
 
 ## Responses
 
