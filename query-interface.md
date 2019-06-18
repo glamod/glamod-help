@@ -90,6 +90,7 @@ In this document, we focus on some specific options here:
  6. Station Type: `station_type`
  7. Searching in an Arrayusing "IN"
  8. Searching only the `observations_table` for efficiency
+ 9. Querying counts of observations per year and month
   
 Details of how these input arguments are specified are given in the examples below.
   
@@ -240,6 +241,19 @@ For speed, you might choose to only query the `observations_table` instead of `r
 This can be done by removing the `primary_station_id` and replacing it with `report_id%20ILIKE%20'<primary_station_id>%25'`. 
 
 This means only the `observations_table` is queried rather than a JOIN on the `header_table`. The key issue is that the `report_id` always begins with the `primary_station_id`.
+
+###  9. Querying counts of observations per year and month
+
+To query the number of observations for a given variable, report type (frequency), year and month, you can query the `observation_counts` table, which has the fields:
+ * report_type
+ * var_code 
+ * year
+ * month
+ * count
+
+To find all monthly counts of monthly air temperature in 1999, use:
+
+ http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=2.0.0&request=GetFeature&typename=observation_counts&outputFormat=json&cql_filter=year=1999%20AND%20var_code=85
 
 ## Responses
 
