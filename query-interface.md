@@ -224,7 +224,7 @@ The Common Query Language (ECQL) allows multiple conditions to be provided as pa
 
  http://glamod1.ceda.ac.uk/geoserver/glamod/ows?service=WFS&version=2.0.0&request=GetFeature&typename=report_table_web&outputFormat=json&cql_filter=primary_station_id=%27AG000060590%27%20AND%20observed_variable=85%20AND%20report_timestamp%20AFTER%201933-01-01T00:00:00Z%20AND%20report_timestamp%20BEFORE%201934-01-02T23:59:59Z%20AND%20date_time%20AFTER%201933-01-01T00:00:00Z%20AND%20date_time%20BEFORE%201934-01-02T23:59:59Z%20AND%20BBOX(report_location,-10,-10,30,49)&count=3
 
-### 7. Searching in an Arrayusing "IN"
+### 7. Searching in an Array using "IN"
 
 You can search to find a value within an array of values using the ` IN ` operator, such as:
 
